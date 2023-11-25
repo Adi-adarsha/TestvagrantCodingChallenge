@@ -81,11 +81,11 @@ int main()
         if (prod[i].price > 500)
         {
             disc_price = prod[i].price - (prod[i].price * disc);
-            total = disc_price + (disc_price * (prod[i].gst / 100)) * prod[i].qty;
+            total += disc_price + (disc_price * (prod[i].gst / 100)) * prod[i].qty;
         }
         else
         {
-            total = prod[i].price + (prod[i].price * (prod[i].gst / 100)) * prod[i].qty;
+            total += prod[i].price + (prod[i].price * (prod[i].gst / 100)) * prod[i].qty;
         }
     }
 
